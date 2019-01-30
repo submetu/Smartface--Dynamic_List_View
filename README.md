@@ -6,7 +6,7 @@
 # Smartface Dynamic ListView
 
 [![Twitter: @Smartface_io](https://img.shields.io/badge/contact-@Smartface_io-blue.svg?style=flat)](https://twitter.com/smartface_io)
-[![License](https://github.com/submetu/Smartface--Dynamic_List_View/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/submetu/Smartface--Dynamic_List_View/blob/master/LICENSE)
 
 
 ## What is this guide about?

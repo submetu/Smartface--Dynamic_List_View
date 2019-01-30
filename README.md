@@ -25,7 +25,7 @@
 * Download the latest Smartface Emulator on your smartphone from our [Enterprise Store](http://e.smartface.io).
 * Click the *Run on Device* option from the toolbar of your workspace which should open a QR code on your screen.
 * Open the Smartface emulator on your smartphone, and scan the QR code.
-* You should see the Smartface Dynamic ListView running.
+* You should see the **Smartface Dynamic ListView** application running.
 
 ## See Also
 - [Smartface E-Commerce App](https://github.com/smartface/sample-sparrow)

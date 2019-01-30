@@ -23,7 +23,7 @@
 
 ## Need Help?
 
-Please [submit an issue](https://github.com/smartface/sample-clienteling/issues) on GitHub and provide information about your problem.
+Please [submit an issue](https://github.com/submetu/Smartface--Dynamic_List_View/issues) on GitHub and provide information about your problem.
 
 ## Support & Documentation & Useful Links
 - [Guides](https://developer.smartface.io)

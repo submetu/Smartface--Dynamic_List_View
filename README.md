@@ -22,8 +22,9 @@
 * Create a new workspace using the Smartface Cloud Dashboard ( Choose the "Clone from Git" option and use the SSH key of this project).
 * After your workspace has successfully opened, open the integrated terminal using `CTRL + ESC` or go to `View -> Console` in the toolbar of your workspace.
 * Navigate to the `/scripts` folder and run `npm install && npm update`.
-* Download the latest Smartface Emulator from our [Enterprise Store](http://e.smartface.io).
-* Click the *Run on Device* option from the toolbar of your workspace, open the Smartface emulator, and scan the QR code.
+* Download the latest Smartface Emulator on your smartphone from our [Enterprise Store](http://e.smartface.io).
+* Click the *Run on Device* option from the toolbar of your workspace which should open a QR code on your screen.
+* Open the Smartface emulator on your smartphone, and scan the QR code.
 * You should see the Smartface Dynamic ListView running.
 
 ## See Also

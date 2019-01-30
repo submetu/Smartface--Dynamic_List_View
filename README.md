@@ -12,9 +12,19 @@
 ## What is this guide about?
 * In some projects, you might have a page in which you are using a [`ListView`](http://ref.smartface.io/#!/api/UI.ListView) component.
 * The [`ListViewItems`](http://ref.smartface.io/#!/api/UI.ListViewItem) in the `ListView` component might be dynamic.
-* At runtime, you will have to refresh the `ListView` with a new set of `ListViewItems`.
-* This is a guide to achieve this.
+* By *Dynamic*, I mean that at runtime, you might have to refresh the `ListView` with a completely new set of `ListViewItems`.
+* This is a guide will show you how to create such a dynamic `ListView`.
 
+## How to Run the Project
+* Fork this project.
+* If you have not already done so, make sure that you have added your smartface SSH key in your github account. 
+(You can find your smartface SSH key in your [Smartface Account](https://cloud.smartface.io/Account)
+* Create a new workspace using the Smartface Cloud Dashboard ( Choose the "Clone from Git" option and use the SSH key of this project).
+* After your workspace has successfully opened, open the integrated terminal using `CTRL + ESC` or go to `View -> Console` in the toolbar of your workspace.
+* Navigate to the `/scripts` folder and run `npm install && npm update`.
+* Download the latest Smartface Emulator from our [Enterprise Store](http://e.smartface.io).
+* Click the *Run on Device* option from the toolbar of your workspace, open the Smartface emulator, and scan the QR code.
+* You should see the Smartface Dynamic ListView running.
 
 ## See Also
 - [Smartface E-Commerce App](https://github.com/smartface/sample-sparrow)
@@ -37,3 +47,5 @@ Please read and follow our [Code of Conduct](https://github.com/smartface/sample
 ## License
 
 This project is licensed under the terms of the MIT license. See the [LICENSE](LICENSE) file. Within the scope of this license, all modifications to the source code, regardless of the fact that it is used commercially or not, shall be committed as a contribution back to this repository.
+
+

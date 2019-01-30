@@ -1,1 +1,61 @@
-{}
+{
+	".lviProfileImage": {
+		"width": null,
+		"height": 200,
+		"&_img": {
+			"imageFillType": "ASPECTFIT",
+			"width": 200,
+			"height": 200,
+			"flexProps": {}
+		},
+		"flexProps": {
+			"alignItems": "CENTER"
+		},
+		"borderWidth": 1
+	},
+	".flGrow": {
+		"flexProps": {
+			"flexGrow": 1
+		},
+		"width": null,
+		"height": null
+	},
+	".lviProfileInformation": {
+		"height": 380,
+		"width": null,
+		"&-name": {
+			"width": null,
+			"flexProps": {
+				"flexGrow": 1,
+				"justifyContent": "FLEX_START",
+				"alignItems": "CENTER",
+				"flexDirection": "ROW"
+			},
+			"height": null,
+			"paddingLeft": 20
+		},
+		"&-occupation": {
+			"flexProps": {
+				"flexGrow": 2
+			}
+		},
+		"&-lblMain": {
+			"width": null,
+			"height": null
+		},
+		"&-lblLeft": {
+			"marginRight": 20
+		}
+	},
+	".flBottomLine": {
+		"width": null,
+		"height": 1,
+		"flexProps": {
+			"positionType": "ABSOLUTE"
+		},
+		"bottom": 0,
+		"left": 0,
+		"right": 0,
+		"backgroundColor": "rgba( 104, 104, 104, 1 )"
+	}
+}

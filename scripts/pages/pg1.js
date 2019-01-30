@@ -1,11 +1,9 @@
-const Font = require("sf-core/ui/font");
-const Label = require("sf-core/ui/label");
 const ListView = require("sf-core/ui/listview");
-const ListViewItem = require("sf-core/ui/listviewitem");
-const TextAlignment = require("sf-core/ui/textalignment");
-const Color = require("sf-core/ui/color");
-const GridView = require("sf-core/ui/gridview");
 const componentContextPatch = require("@smartface/contx/lib/smartface/componentContextPatch");
+const LviProfileImage = require("components/LviProfileImage");
+const LviProfileInformation = require("components/LviProfileInformation");
+const listViewTypes = require("../lib/listViewTypes");
+
 /* 
 		You can modify its contents.
 */
@@ -44,84 +42,63 @@ function onShow(superOnShow) {
 function onLoad(superOnLoad) {
   superOnLoad();
   const page = this;
+  page.layoutInfo = Object.assign(listViewTypes.initialTypes, listViewTypes.basicInfo);
+  page.layoutInfoKeys = Object.keys(page.layoutInfo);
   page.initListView();
 }
 
 function initListView() {
   const page = this;
 
-  var myDataSet = [{
-    title: 'Smartface Title 1',
-    backgroundColor: Color.create("#99d9f9")
-  }, {
-    title: 'Smartface Title 2',
-    backgroundColor: Color.create("#66c6f6")
-  }, {
-    title: 'Smartface Title 3',
-    backgroundColor: Color.create("#32b3f3")
-  }, {
-    title: 'Smartface Title 4',
-    backgroundColor: Color.create("#00a1f1")
-  }, {
-    title: 'Smartface Title 5',
-    backgroundColor: Color.create("#00a1f1")
-  }, {
-    title: 'Smartface Title 6',
-    backgroundColor: Color.create("#00a1f1")
-  }, {
-    title: 'Smartface Title 7',
-    backgroundColor: Color.create("#00a1f1")
-  }, {
-    title: 'Smartface Title 8',
-    backgroundColor: Color.create("#00a1f1")
-  }, {
-    title: 'Smartface Title 9',
-    backgroundColor: Color.create("#00a1f1")
-  }];
-
   var myListView = new ListView({
     flexGrow: 1,
-    rowHeight: 70,
-    itemCount: myDataSet.length,
+    itemCount: page.layoutInfoKeys.length,
   });
 
   page.layout.addChild(myListView);
 
-  myListView.onRowCreate = function() {
-    var myListViewItem = new ListViewItem();
-    var myLabelTitle = new Label({
-      flexGrow: 1,
-      marginTop: 10,
-      marginBottom: 10,
-      marginLeft: 50,
-      marginRight: 50
-    });
-    myLabelTitle.font = Font.create(Font.DEFAULT, 15, Font.BOLD);
-    myLabelTitle.textAlignment = TextAlignment.MIDCENTER;
-    myLabelTitle.textColor = Color.WHITE;
-    myLabelTitle.borderRadius = 10;
-    myListViewItem.addChild(myLabelTitle);
-    myListViewItem.myLabelTitle = myLabelTitle;
+  myListView.onRowCreate = type => {
+    let myListViewItem;
+    console.log('type: ', type);
+    console.log('profile: ', listViewTypes.all.PROFILE);
+
+    if (type === listViewTypes.all.PROFILE) {
+      myListViewItem = new LviProfileImage();
+    }
+    else if (type === listViewTypes.all.PROFILE_INFORMATION) {
+      myListViewItem = new LviProfileInformation();
+    }
+
+    componentContextPatch(myListViewItem, `myListViewItem${type}`);
     return myListViewItem;
   };
   myListView.onRowBind = function(listViewItem, index) {
-    var myLabelTitle = listViewItem.myLabelTitle;
-    myLabelTitle.text = myDataSet[index].title;
-    myLabelTitle.backgroundColor = myDataSet[index].backgroundColor;
+    // var myLabelTitle = listViewItem.myLabelTitle;
+    // myLabelTitle.text = myDataSet[index].title;
+    // myLabelTitle.backgroundColor = myDataSet[index].backgroundColor;
   };
   myListView.onRowSelected = function(listViewItem, index) {
     console.log("selected index = " + index)
   };
 
-  myListView.onPullRefresh = function() {
-    myDataSet.push({
-      title: 'Smartface Title ' + (myDataSet.length + 1),
-      backgroundColor: Color.RED,
-    })
-    myListView.itemCount = myDataSet.length;
-    myListView.refreshData();
-    myListView.stopRefresh();
-  }
+  myListView.onRowType = index => {
+    const { layoutInfo, layoutInfoKeys } = this;
+    return layoutInfo[layoutInfoKeys[index]];
+  };
+  myListView.onRowHeight = index => {
+    const { layoutInfo, layoutInfoKeys } = this;
+    let type = layoutInfo[layoutInfoKeys[index]];
+    let height = 0;
+    if (type === listViewTypes.all.PROFILE) {
+      height = 200;
+    }
+    else if (type === listViewTypes.all.PROFILE_INFORMATION) {
+      height = 380;
+    }
+    return height
+  };
 }
+
+
 
 module.exports = Pg1;

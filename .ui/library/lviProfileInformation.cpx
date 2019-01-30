@@ -1,0 +1,250 @@
+{
+	"components": [
+		{
+			"className": ".sf-listViewItem .lviProfileInformation",
+			"hiddenComponent": true,
+			"id": "2080-5276-40b3-51f1",
+			"initialized": true,
+			"props": {
+				"children": [
+					"80ff-63df-54a5-438e",
+					"4a05-fe90-fa7d-eef2",
+					"0cca-1651-9634-acef"
+				],
+				"name": "lviProfileInformation",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ListViewItem",
+			"userProps": {
+				"flexProps": {},
+				"left": 24.146075581395348,
+				"top": 200.07267441860466
+			}
+		},
+		{
+			"className": ".sf-flexLayout .lviProfileInformation-name",
+			"id": "80ff-63df-54a5-438e",
+			"props": {
+				"children": [
+					"4d01-cb18-9324-cfbe",
+					"2508-345d-61cd-3ee7",
+					"1fae-8c3a-48f9-ab82"
+				],
+				"name": "flName",
+				"parent": "2080-5276-40b3-51f1"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-label .lviProfileInformation-lblMain .lviProfileInformation-lblLeft",
+			"id": "4d01-cb18-9324-cfbe",
+			"props": {
+				"autoHeight": 22.093023255813954,
+				"autoWidth": 63.95348837209303,
+				"children": [],
+				"name": "lblNameLeft",
+				"parent": "80ff-63df-54a5-438e",
+				"text": "  Name:"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 22.093023255813954,
+				"autoWidth": 63.95348837209303,
+				"text": "  Name:"
+			}
+		},
+		{
+			"className": ".sf-label",
+			"id": "2508-345d-61cd-3ee7",
+			"props": {
+				"autoHeight": 51.16279069767442,
+				"autoWidth": 54.48764534883721,
+				"children": [],
+				"name": "lblNameRight",
+				"parent": "80ff-63df-54a5-438e",
+				"text": "Jesica"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 51.16279069767442,
+				"autoWidth": 54.48764534883721,
+				"text": "Jesica"
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flBottomLine",
+			"id": "1fae-8c3a-48f9-ab82",
+			"props": {
+				"children": [],
+				"name": "flBottomLine",
+				"parent": "80ff-63df-54a5-438e"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-flexLayout .lviProfileInformation-name",
+			"id": "4a05-fe90-fa7d-eef2",
+			"props": {
+				"children": [
+					"d700-1529-9330-6cb2",
+					"4f33-ad39-a425-ab30",
+					"8bdd-d6d4-27ca-bdcc"
+				],
+				"name": "flAge",
+				"parent": "2080-5276-40b3-51f1"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-label .lviProfileInformation-lblMain .lviProfileInformation-lblLeft",
+			"id": "d700-1529-9330-6cb2",
+			"props": {
+				"autoHeight": 22.093023255813954,
+				"autoWidth": 48.20130813953489,
+				"children": [],
+				"name": "lblNameLeft",
+				"parent": "4a05-fe90-fa7d-eef2",
+				"text": "  Age:"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 22.093023255813954,
+				"autoWidth": 48.20130813953489,
+				"text": "  Age:"
+			}
+		},
+		{
+			"className": ".sf-label",
+			"id": "4f33-ad39-a425-ab30",
+			"props": {
+				"autoHeight": 51.16279069767442,
+				"autoWidth": 22.874273255813954,
+				"children": [],
+				"name": "lblNameRight",
+				"parent": "4a05-fe90-fa7d-eef2",
+				"text": "25"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 51.16279069767442,
+				"autoWidth": 22.874273255813954,
+				"text": "25"
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flBottomLine",
+			"id": "8bdd-d6d4-27ca-bdcc",
+			"props": {
+				"children": [],
+				"name": "flBottomLine",
+				"parent": "4a05-fe90-fa7d-eef2"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-flexLayout .lviProfileInformation-name",
+			"id": "0cca-1651-9634-acef",
+			"props": {
+				"children": [
+					"b22e-70c2-28f5-83cb",
+					"bbe1-9fe5-e43d-29dc",
+					"f313-23d3-70f3-5aea"
+				],
+				"name": "flOccupation",
+				"parent": "2080-5276-40b3-51f1"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-label .lviProfileInformation-lblMain .lviProfileInformation-lblLeft",
+			"id": "b22e-70c2-28f5-83cb",
+			"props": {
+				"autoHeight": 22.093023255813954,
+				"autoWidth": 97.12936046511628,
+				"children": [],
+				"name": "lblNameLeft",
+				"parent": "0cca-1651-9634-acef",
+				"text": "Occupation"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 22.093023255813954,
+				"autoWidth": 97.12936046511628,
+				"text": "Occupation"
+			}
+		},
+		{
+			"className": ".sf-label",
+			"id": "bbe1-9fe5-e43d-29dc",
+			"props": {
+				"autoHeight": 51.16279069767442,
+				"autoWidth": 148.85537790697674,
+				"children": [],
+				"name": "lblNameRight",
+				"parent": "0cca-1651-9634-acef",
+				"text": "Mountain Climber"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 51.16279069767442,
+				"autoWidth": 148.85537790697674,
+				"text": "Mountain Climber"
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flBottomLine",
+			"id": "f313-23d3-70f3-5aea",
+			"props": {
+				"children": [],
+				"name": "flBottomLine",
+				"parent": "0cca-1651-9634-acef"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		}
+	]
+}

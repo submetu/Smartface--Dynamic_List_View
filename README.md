@@ -6,7 +6,7 @@
 # Smartface Dynamic ListView
 
 [![Twitter: @Smartface_io](https://img.shields.io/badge/contact-@Smartface_io-blue.svg?style=flat)](https://twitter.com/smartface_io)
-[![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/smartface/sample-clienteling/blob/master/LICENSE.md)
+[![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/submetu/Smartface--Dynamic_List_View/blob/master/LICENSE)
 
 
 ## What is this guide about?
@@ -33,7 +33,7 @@
 
 ## Need Help?
 
-Please [submit an issue](https://github.com/smartface/sample-clienteling/issues) on GitHub and provide information about your problem.
+Please [submit an issue](https://github.com/submetu/Smartface--Dynamic_List_View/issues) on GitHub and provide information about your problem.
 
 ## Support & Documentation & Useful Links
 - [Guides](https://developer.smartface.io)
@@ -42,7 +42,7 @@ Please [submit an issue](https://github.com/smartface/sample-clienteling/issues)
 
 ## Code of Conduct
 We are committed to making participation in this project a harassment-free experience for everyone, regardless of the level of experience, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, religion, or nationality.
-Please read and follow our [Code of Conduct](https://github.com/smartface/sample-clienteling/blob/master/CODE_OF_CONDUCT.md).
+Please read and follow our [Code of Conduct](https://github.com/submetu/Smartface--Dynamic_List_View/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 

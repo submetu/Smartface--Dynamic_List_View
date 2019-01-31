@@ -57,5 +57,23 @@
 		"left": 0,
 		"right": 0,
 		"backgroundColor": "rgba( 104, 104, 104, 1 )"
+	},
+	".flTop": {
+		"height": 80,
+		"width": null,
+		"flexProps": {
+			"flexDirection": "ROW",
+			"alignItems": "CENTER",
+			"justifyContent": "SPACE_AROUND"
+		},
+		"backgroundColor": "rgba( 235, 235, 235, 1 )"
+	},
+	".lviProjects": {
+		"width": null,
+		"height": 300,
+		"paddingLeft": 20
+	},
+	".lblProject": {
+		"height": 100
 	}
 }

@@ -7,7 +7,8 @@
 			"props": {
 				"children": [
 					"8d03-4595-d2ec-5361",
-					"a429-faaa-e031-e8cb"
+					"a429-faaa-e031-e8cb",
+					"6924-9e32-0e1b-bb12"
 				],
 				"name": "pg1",
 				"orientation": "PORTRAIT",
@@ -42,6 +43,81 @@
 			"type": "HeaderBar",
 			"userProps": {
 				"title": "pg1"
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flTop",
+			"id": "6924-9e32-0e1b-bb12",
+			"props": {
+				"children": [
+					"bd31-236f-6290-e6a0",
+					"f5ed-273b-7f51-ef1c",
+					"a5b9-9b7c-2dce-4ac6"
+				],
+				"name": "flTop",
+				"parent": "64d9-3932-b66c-0478"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-button #pg1_btn",
+			"id": "bd31-236f-6290-e6a0",
+			"props": {
+				"autoHeight": 50.81967213114754,
+				"autoWidth": 78.68852459016394,
+				"children": [],
+				"name": "btnLeft",
+				"parent": "6924-9e32-0e1b-bb12",
+				"text": "Basic Info",
+				"usePageVariable": true
+			},
+			"type": "Button",
+			"userProps": {
+				"autoHeight": 50.81967213114754,
+				"autoWidth": 78.68852459016394,
+				"text": "Basic Info",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-button #pg1_btn",
+			"id": "f5ed-273b-7f51-ef1c",
+			"props": {
+				"autoHeight": 51.66666666666667,
+				"autoWidth": 56.51041666666667,
+				"children": [],
+				"name": "btnMiddle",
+				"parent": "6924-9e32-0e1b-bb12",
+				"text": "All Info",
+				"usePageVariable": true
+			},
+			"type": "Button",
+			"userProps": {
+				"autoHeight": 51.66666666666667,
+				"autoWidth": 56.51041666666667,
+				"text": "All Info",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-button #pg1_btn",
+			"id": "a5b9-9b7c-2dce-4ac6",
+			"props": {
+				"autoHeight": 51.66666666666667,
+				"autoWidth": 101.45833333333334,
+				"children": [],
+				"name": "btnRight",
+				"parent": "6924-9e32-0e1b-bb12",
+				"text": "Detailed Info",
+				"usePageVariable": true
+			},
+			"type": "Button",
+			"userProps": {
+				"autoHeight": 51.66666666666667,
+				"autoWidth": 101.45833333333334,
+				"text": "Detailed Info",
+				"usePageVariable": true
 			}
 		}
 	]

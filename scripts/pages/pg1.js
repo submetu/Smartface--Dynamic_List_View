@@ -2,6 +2,7 @@ const ListView = require("sf-core/ui/listview");
 const componentContextPatch = require("@smartface/contx/lib/smartface/componentContextPatch");
 const LviProfileImage = require("components/LviProfileImage");
 const LviProfileInformation = require("components/LviProfileInformation");
+const LviProjects = require("components/LviProjects");
 const listViewTypes = require("../lib/listViewTypes");
 
 /* 
@@ -21,6 +22,9 @@ const Pg1 = extend(Pg1Design)(
     this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
     //this binding
     this.initListView = initListView.bind(this);
+    this.getRowType = getRowType.bind(this);
+    this.setButtonEvents = setButtonEvents.bind(this);
+    this.updateListView = updateListView.bind(this);
   });
 
 /**
@@ -42,15 +46,54 @@ function onShow(superOnShow) {
 function onLoad(superOnLoad) {
   superOnLoad();
   const page = this;
-  page.layoutInfo = Object.assign(listViewTypes.initialTypes, listViewTypes.basicInfo);
-  page.layoutInfoKeys = Object.keys(page.layoutInfo);
+
+  page.updateListView({
+    listViewType: Object.assign({}, listViewTypes.initialTypes, listViewTypes.basicInfo),
+  });
+
   page.initListView();
+  page.setButtonEvents();
+}
+
+function setButtonEvents() {
+  const page = this;
+  const { btnLeft, btnRight, btnMiddle } = page;
+  btnLeft.onPress = () => {
+    page.updateListView({
+      listViewType: Object.assign({}, listViewTypes.initialTypes, listViewTypes.basicInfo),
+      refresh: true
+    });
+  };
+  btnRight.onPress = () => {
+    page.updateListView({
+      listViewType: listViewTypes.detailedInfo,
+      refresh: true
+    });
+  };
+  btnMiddle.onPress = () => {
+    page.updateListView({
+      listViewType: listViewTypes.all,
+      refresh: true
+    });
+  };
+}
+
+function updateListView({ listViewType, refresh }) {
+  const page = this;
+  page.layoutInfo = listViewType;
+  page.layoutInfoKeys = Object.keys(page.layoutInfo);
+  if (refresh && page.listView) {
+    page.listView.itemCount = page.layoutInfoKeys.length;
+    page.listView.refreshData();
+    page.layout.applyLayout();
+  }
 }
 
 function initListView() {
   const page = this;
 
-  var myListView = new ListView({
+  //bind the listview to the page so that we can access it in other methods like `updateListView()`
+  var myListView = page.listView = new ListView({
     flexGrow: 1,
     itemCount: page.layoutInfoKeys.length,
   });
@@ -59,8 +102,6 @@ function initListView() {
 
   myListView.onRowCreate = type => {
     let myListViewItem;
-    console.log('type: ', type);
-    console.log('profile: ', listViewTypes.all.PROFILE);
 
     if (type === listViewTypes.all.PROFILE) {
       myListViewItem = new LviProfileImage();
@@ -68,26 +109,18 @@ function initListView() {
     else if (type === listViewTypes.all.PROFILE_INFORMATION) {
       myListViewItem = new LviProfileInformation();
     }
+    else if (type === listViewTypes.all.PROJECTS) {
+      myListViewItem = new LviProjects();
+    }
 
     componentContextPatch(myListViewItem, `myListViewItem${type}`);
     return myListViewItem;
   };
-  myListView.onRowBind = function(listViewItem, index) {
-    // var myLabelTitle = listViewItem.myLabelTitle;
-    // myLabelTitle.text = myDataSet[index].title;
-    // myLabelTitle.backgroundColor = myDataSet[index].backgroundColor;
-  };
-  myListView.onRowSelected = function(listViewItem, index) {
-    console.log("selected index = " + index)
-  };
 
-  myListView.onRowType = index => {
-    const { layoutInfo, layoutInfoKeys } = this;
-    return layoutInfo[layoutInfoKeys[index]];
-  };
+  myListView.onRowType = page.getRowType;
+  
   myListView.onRowHeight = index => {
-    const { layoutInfo, layoutInfoKeys } = this;
-    let type = layoutInfo[layoutInfoKeys[index]];
+    let type = page.getRowType(index);
     let height = 0;
     if (type === listViewTypes.all.PROFILE) {
       height = 200;
@@ -95,10 +128,21 @@ function initListView() {
     else if (type === listViewTypes.all.PROFILE_INFORMATION) {
       height = 380;
     }
+    else if (type === listViewTypes.all.PROJECTS) {
+      height = 300;
+    }
     return height
   };
+
+  myListView.onRowBind = function(listViewItem, index) {};
+
+  myListView.onRowSelected = function(listViewItem, index) {};
 }
 
-
+function getRowType(index) {
+  const page = this;
+  const { layoutInfo, layoutInfoKeys } = page;
+  return layoutInfo[layoutInfoKeys[index]];
+}
 
 module.exports = Pg1;

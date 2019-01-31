@@ -1,8 +1,7 @@
 let allTypes = {
     PROFILE: 0,
     PROFILE_INFORMATION: 1,
-    // PROJECTS: 2,
-    // RECOMMENDATIONS: 3,
+    PROJECTS: 2,
 };
 
 
@@ -11,9 +10,9 @@ let basicInfo = {
 };
 
 let detailedInfo = {
-    // PROJECTS: 2,
-    // RECOMMENDATIONS: 3,
+    PROJECTS: 2,
 };
+
 
 let initialTypes = {
     PROFILE: 0,

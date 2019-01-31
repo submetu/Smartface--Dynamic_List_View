@@ -2,7 +2,7 @@
 	"components": [
 		{
 			"className": ".sf-listViewItem .lviProfileImage",
-			"hiddenComponent": false,
+			"hiddenComponent": true,
 			"id": "03e8-f66a-607e-bb25",
 			"initialized": true,
 			"props": {

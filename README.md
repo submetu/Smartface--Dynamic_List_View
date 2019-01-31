@@ -27,6 +27,11 @@
 * Open the Smartface emulator on your smartphone, and scan the QR code.
 * You should see the **Smartface Dynamic ListView** application running.
 
+
+## Preview of the running application 
+![Preview of the running application](ezgif.com-video-to-gif.gif)
+
+
 ## See Also
 - [Smartface E-Commerce App](https://github.com/smartface/sample-sparrow)
 - [Smartface Field Service App](https://github.com/smartface/sample-field-service)

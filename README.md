@@ -45,7 +45,7 @@
 * These instructions are based on the index of the `listViewItem`
 * The instructions can be found in `scripts/lib/listViewTypes`
 ### The Instructions (determines the order of the listViewItems)
-*First we define all the components in the `listView` and assign a number to it
+* First we define all the components in the `listView` and assign a number to it
 ```javascript
 let allTypes = {
     PROFILE: 0,
@@ -53,8 +53,8 @@ let allTypes = {
     PROJECTS: 2,
 };
 ```
-*These numbers do not have to be in order but they have to be unique.
-*As mentioned above, we now define the **data states** 
+* These numbers do not have to be in order but they have to be unique.
+* Its now time to define those **data states** 
 
 ```javascript
 let basicInfo = {
@@ -93,7 +93,7 @@ let initialTypes = {
 * You can pretty much combine the **data states** in whichever way you like. 
 * Here I combine the `initialTypes` with the `basicInfo` **data state** 
 
-** After this, I render my `listView` and set the events on the buttons.
+** After this, we render the `listView` and set events on the buttons.
 
 ### Runtime
 

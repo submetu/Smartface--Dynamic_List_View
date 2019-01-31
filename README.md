@@ -77,7 +77,7 @@ let initialTypes = {
 };
 
 ```
-* These **data states** will be manipulated back in `scripts/pages/pg1.js`
+* These **data states** will be manipulated/combined to create a dynamic `listView` back in `scripts/pages/pg1.js`
 
 ### First Load
 

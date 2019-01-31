@@ -28,8 +28,83 @@
 * You should see the **Smartface Dynamic ListView** application running.
 
 
-## Preview of the running application 
+## Application Preview 
 ![Preview of the running application](ezgif.com-video-to-gif.gif)
+
+## Walkthrough of the Project
+### Overview
+* In this application we have a total of 3 **data states**
+* These **data states** are determined by a set of instructions that we will see in a while
+* The **data states** can be changed by the user by clicking the buttons on the page
+### The Entry Point
+* In `scripts/app.js`, we define a simple router configuration with a single page `scripts/pages/pg1.js`
+### The ListView
+* In `pages/pg1`, we are creating a `listView`
+* The dynamic nature of the `listView` comes from the `onRowType()` method of the `listView`
+* This method returns instructions as to which component to render
+* These instructions are based on the index of the `listViewItem`
+* The instructions can be found in `scripts/lib/listViewTypes`
+### The Instructions (determines the order of the listViewItems)
+*First we define all the components in the `listView` and assign a number to it
+```javascript
+let allTypes = {
+    PROFILE: 0,
+    PROFILE_INFORMATION: 1,
+    PROJECTS: 2,
+};
+```
+*These numbers do not have to be in order but they have to be unique.
+*As mentioned above, we now define the **data states** 
+
+```javascript
+let basicInfo = {
+    PROFILE_INFORMATION: 1,
+};
+
+let detailedInfo = {
+    PROJECTS: 2,
+};
+```
+* These **data states** will be used to show different `listViewItems` on the page.
+* The numbers assigned to the individual **data states** ***MUST*** be similar everywhere in this file.
+
+* Next, we define an additional variable. This is the **initial State** of the application.
+* This has no particular use in this application, however, you can use this method when you have shared **data states** or when you want to have a static initial **data state**
+
+```javascript
+let initialTypes = {
+    PROFILE: 0,
+};
+
+```
+* These **data states** will be manipulated back in `scripts/pages/pg1.js`
+
+### First Load
+
+* When you first load the application, the following function is called
+
+```javascript
+ page.updateListView({
+    listViewType: Object.assign({}, listViewTypes.initialTypes, listViewTypes.basicInfo),
+  });
+```
+
+* This function assigns the first set of instructions that sets the initial **data states**
+* You can pretty much combine the **data states** in whichever way you like. 
+* Here I combine the `initialTypes` with the `basicInfo` **data state** 
+
+** After this, I render my `listView` and set the events on the buttons.
+
+### Runtime
+
+* At runtime, you can click the buttons on the page. These events are handled in the `setButtonEvents()` function
+* In every event handler, we are doing a couple of things
+  1. We are passing in new **data states** to the ` updateListView()` function. (Again these can be set as per your needs)
+  2. We are refreshing the `listView` so that it can update the `listViewItems` according to the current **data states**
+
+### Nitty Gritty of the ListView
+
+ 
 
 
 ## See Also

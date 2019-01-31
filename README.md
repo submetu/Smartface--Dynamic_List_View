@@ -91,9 +91,9 @@ let initialTypes = {
 
 * This function assigns the first set of instructions that sets the initial **data states**
 * You can pretty much combine the **data states** in whichever way you like. 
-* Here I combine the `initialTypes` with the `basicInfo` **data state** 
+* Here I combine the `initialTypes` with the `basicInfo` **data states** 
 
-** After this, we render the `listView` and set events on the buttons.
+* After this, we render the `listView` and set events on the buttons.
 
 ### Runtime
 

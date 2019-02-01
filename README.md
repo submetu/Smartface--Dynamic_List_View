@@ -19,7 +19,7 @@
 * Fork this project.
 * If you have not already done so, make sure that you have added your smartface SSH key in your github account. 
 (You can find your smartface SSH key in your [Smartface Account](https://cloud.smartface.io/Account)
-* Create a new workspace using the Smartface Cloud Dashboard ( Choose the "Clone from Git" option and use the SSH key of this project).
+* Create a new workspace using the Smartface Cloud Dashboard ( Choose the "Clone from Git" option and use the SSH clone link of your forked project).
 * After your workspace has successfully opened, open the integrated terminal using `CTRL + ESC` or go to `View -> Console` in the toolbar of your workspace.
 * Navigate to the `/scripts` folder and run `npm install && npm update`.
 * Download the latest Smartface Emulator on your smartphone from our [Enterprise Store](http://e.smartface.io).
@@ -116,9 +116,9 @@ let initialTypes = {
 * Inside `onRowCreate()`, we instantiate different `listViewItems` according to the `type`
 * Note that `type` here corresponds to the different ***data states*** 
 #### `onRowHeight(index)`
-* This method takes in a parameter `index`. This is ***NOT*** the same as the type. 
+* This method takes in a parameter `index`. This is ***NOT*** the same as the type
 * So we run the `getRowType()` function to get the type
-* Next, since each `listViewItem` has a different height, according to the ***data state***, we are returing the corresponding height.
+* Next, since each `listViewItem` has a different height, according to the ***data state***, we are returning the corresponding height
 * The heights here are hardcoded. A better way to do this is to use the class names of the individual `listViewItems` and get the heights using [sf-extension-utils/getCombinedStyle](https://github.com/smartface/sf-extension-utils/blob/master/lib/getCombinedStyle.js)
 
 ## Further possible improvements

@@ -121,6 +121,8 @@ let initialTypes = {
 * Next, since each `listViewItem` has a different height, according to the ***data state***, we are returing the corresponding height.
 * The heights here are hardcoded. A better way to do this is to use the class names of the individual `listViewItems` and get the heights using [sf-extension-utils/getCombinedStyle](https://github.com/smartface/sf-extension-utils/blob/master/lib/getCombinedStyle.js)
 
+## Improvements
+* If you have any improvements in mind, please open an issue or a pull request
 
 ## See Also
 - [Smartface E-Commerce App](https://github.com/smartface/sample-sparrow)

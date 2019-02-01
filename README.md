@@ -124,7 +124,7 @@ let initialTypes = {
 ## Improvements
 * If you have any improvements in mind, please open an issue or a pull request
 
-##Contribution
+## Contribution
 * Contributions are welcome.
 ### How to contribute?
 * Fork the repository

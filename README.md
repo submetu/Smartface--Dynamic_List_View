@@ -124,6 +124,39 @@ let initialTypes = {
 ## Improvements
 * If you have any improvements in mind, please open an issue or a pull request
 
+##Contribution
+* Contributions are welcome.
+### How to contribute?
+* Fork the repository
+* Follow the instructions in the **How to Run the Project** section
+* Create a separate branch and make your changes
+* Make sure the test cases below are working
+* Compare the way the app works with the **gif** above in the **Application Preview** section
+* If everything works fine, commit+push your changes
+* Open an [issue](https://github.com/submetu/Smartface--Dynamic_List_View/issues) referencing your commit
+* If you create a change that breaks the test cases, and if you think its necessary or an improvement, then make sure to update the [`README.md`](https://github.com/submetu/Smartface--Dynamic_List_View/blob/master/README.md) file
+
+## Test cases
+* When the application loads, I should be redirected to `scripts/pages/pg1.js`
+* There should be three buttons at the top of the page
+* `BASIC INFO` | `ALL INFO` | `DETAILED INFO`
+* The app should load with 2 **data states**
+    1. PROFILE
+    2. PROFILE_INFORMATION
+* Clicking on `BASIC INFO` button should update the listview (in the following order) with 
+    1. PROFILE
+    2. PROFILE_INFORMATION
+* Clicking on `ALL INFO` button should update the listview (in the following order) with:
+    1. PROFILE
+    2. PROFILE_INFORMATION
+    3. PROJECT
+* Clicking on `DETAILED INFO` button should update the listview (in the following order) with:
+    1. PROJECT
+ 
+
+  
+
+
 ## See Also
 - [Smartface E-Commerce App](https://github.com/smartface/sample-sparrow)
 - [Smartface Field Service App](https://github.com/smartface/sample-field-service)

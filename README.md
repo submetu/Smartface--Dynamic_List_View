@@ -29,8 +29,12 @@
 
 
 ## Application Preview 
-![Preview of the running application](ezgif.com-video-to-gif.gif)
 
+<p align="center" >
+  <kbd><img src="ezgif.com-video-to-gif.gif" width="300"></kbd>
+</p>
+
+  
 ## Walkthrough of the Project
 ### Overview
 * In this application we have a total of 3 **data states**

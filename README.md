@@ -81,7 +81,8 @@ let initialTypes = {
 
 ### First Load
 
-* When you first load the application, the following function is called
+* When you first load the application, the router configuration in `scripts/app.js` redirects you to the page `scripts/pages/pg1.js`
+* The following function is called in the `onLoad()` method of the page
 
 ```javascript
  page.updateListView({

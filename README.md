@@ -104,7 +104,21 @@ let initialTypes = {
 
 ### Nitty Gritty of the ListView
 
- 
+* Since we have different *data states* in our application, we need to let the `listView` know about that
+* There are two methods that are aware of these states ( ***STATE AWARE*** )
+  1. `listView.onRowCreate()`
+  2. `listView.onRowHeight()`
+* Note that due to the simplicity of the application, we are not making use of the `listView.onRowBind()` method. In real world applications, you most definitely will be using this method. Therefore, if you are using it, make sure to make this method ***STATE AWARE*** too.
+#### `onRowCreate(type)`
+* This method takes in the a parameter `type` that is the return value of `listView.onRowType()`
+* As discussed previously, `listView.onRowType()` is responsible for the dynamic nature of the `listView`
+* Inside `onRowCreate()`, we instantiate different `listViewItems` according to the `type`
+* Note that `type` here corresponds to the different ***data states*** 
+#### `onRowHeight(index)`
+* This method takes in a parameter `index`. This is ***NOT*** the same as the type. 
+* So we run the `getRowType()` function to get the type
+* Next, since each `listViewItem` has a different height, according to the ***data state***, we are returing the corresponding height.
+* The heights here are hardcoded. A better way to do this is to use the class names of the individual `listViewItems` and get the heights using [sf-extension-utils/getCombinedStyle](https://github.com/smartface/sf-extension-utils/blob/master/lib/getCombinedStyle.js)
 
 
 ## See Also
